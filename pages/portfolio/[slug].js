@@ -1,4 +1,7 @@
 import { gql, GraphQLClient } from 'graphql-request'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import Head from 'next/head'
+import Image from 'next/image'
 import { portfolioProject } from '../../lib/data'
 
 const endpoint =
@@ -15,7 +18,6 @@ export const getStaticPaths = async () => {
         }
     `
     const data = await client.request(query)
-    console.log(data)
 
     return {
         paths: data.portfolios.map((portfolio) => ({
@@ -26,15 +28,6 @@ export const getStaticPaths = async () => {
     }
 }
 
-// export const getStaticPaths = async () => {
-//     const slugs = await portfolioProject()
-//     console.log(slugs)
-
-//     return {
-//         paths: [],
-//         fallback: true,
-//     }
-// }
 export const getStaticProps = async ({ params }) => {
     const project = await portfolioProject(params.slug)
     return {
@@ -48,8 +41,33 @@ export default function ProjectPage({ project }) {
     console.log(project)
 
     return (
-        <div className='text-green-800 text-center text-3xl font-bold'>
-            <div>{project.title}</div>
+        <div>
+            <Head>
+                <title>{project.title}</title>
+            </Head>
+
+            <main className=''>
+                <h2>{project.title}</h2>
+                <Image
+                    src={project.coverImage.url}
+                    width={project.coverImage.width}
+                    height={project.coverImage.height}
+                />
+                <p>{project.description}</p>
+                <RichText content={project.content.raw.children} />
+
+                <a href={project.repository} target='_blank'>
+                    Repository
+                </a>
+                <a href={project.link} target='_blank'>
+                    Website
+                </a>
+                <div>
+                    {project.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                    ))}
+                </div>
+            </main>
         </div>
     )
 }

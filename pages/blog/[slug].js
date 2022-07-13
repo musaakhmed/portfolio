@@ -1,4 +1,7 @@
 import { gql, GraphQLClient } from 'graphql-request'
+import { RichText } from '@graphcms/rich-text-react-renderer'
+import Head from 'next/head'
+import Image from 'next/image'
 import { blogPost } from '../../lib/data'
 
 const endpoint =
@@ -35,13 +38,30 @@ export const getStaticProps = async ({ params }) => {
     }
 }
 
-export default function ProjectPage({ post }) {
+export default function BlogPost({ post }) {
     console.log(post)
 
     return (
-        <div className='text-green-800 text-center text-3xl font-bold'>
-            <div>{post.title}</div>
-            <img src={post.coverImage.url} alt='' />
+        <div>
+            <Head>
+                <title>{post.title}</title>
+            </Head>
+
+            <main className=''>
+                <h2>{post.title}</h2>
+                <p>{new Date(post.date).toDateString()}</p>
+                <Image
+                    src={post.coverImage.url}
+                    width={post.coverImage.width}
+                    height={post.coverImage.height}
+                />
+                <RichText content={post.content.raw.children} />
+                <div>
+                    {post.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                    ))}
+                </div>
+            </main>
         </div>
     )
 }
