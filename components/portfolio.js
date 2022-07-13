@@ -1,10 +1,5 @@
-
-}
-
 const Portfolio = () => {
-  return (
-    <div>portfolio</div>
-  )
+    return <div>portfolio</div>
 }
 
 export default Portfolio
