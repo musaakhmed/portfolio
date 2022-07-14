@@ -1,11 +1,60 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    //     darkMode: 'class',
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                Roboto: ['Roboto Mono', 'monospace'],
+                Source: ['Source Code Pro', 'monospace'],
+            },
+        },
+        colors: {
+            oxford: '#000929',
+            midnight: '#00176B',
+            sun: {
+                DEFAULT: '#FCA311',
+                50: '#FEE9C6',
+                100: '#FEE1B2',
+                200: '#FED28A',
+                300: '#FDC262',
+                400: '#FDB339',
+                500: '#FCA311',
+                600: '#D28403',
+                700: '#9B6102',
+                800: '#633E01',
+                900: '#2C1C01',
+            },
+            gray: {
+                DEFAULT: '#919191',
+                50: '#EDEDED',
+                100: '#E3E3E3',
+                200: '#CECECE',
+                300: '#BABABA',
+                400: '#A5A5A5',
+                500: '#919191',
+                600: '#757575',
+                700: '#595959',
+                800: '#3D3D3D',
+                900: '#212121',
+            },
+            blue: {
+                DEFAULT: '#004DE6',
+                50: '#CCE9FF',
+                100: '#B3DCFF',
+                200: '#80BDFF',
+                300: '#4D9AFF',
+                400: '#1A72FF',
+                500: '#004DE6',
+                600: '#0031AE',
+                700: '#001B76',
+                800: '#000B3E',
+                900: '#000106',
+            },
+        },
     },
     plugins: [],
 }

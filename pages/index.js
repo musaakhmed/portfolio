@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Hero from '../components/Hero'
 import { portfolioAndBlogData } from '../lib/data'
 
 export const getStaticProps = async () => {
@@ -13,8 +14,8 @@ export const getStaticProps = async () => {
 export default function Home({ data }) {
     console.log(data)
     return (
-        <div className='text-green-800 text-center text-3xl font-bold'>
-            Hello!
+        <div className=''>
+            <Hero />
             <div>
                 {data.portfolios.map((project) => (
                     <div key={project.slug}>
@@ -27,6 +28,7 @@ export default function Home({ data }) {
                     </div>
                 ))}
             </div>
+
             <div>
                 {data.posts.map((post) => (
                     <div key={post.slug}>
@@ -36,7 +38,7 @@ export default function Home({ data }) {
                         >
                             <a>{post.title}</a>
                         </Link>
-                        <div>{post.date}</div>
+                        <div>{new Date(post.date).toDateString()}</div>
                     </div>
                 ))}
             </div>
