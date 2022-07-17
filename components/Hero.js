@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <section className='h-screen w-screen'>
+        <main className='h-screen w-screen'>
             <div className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-row flex h-full items-start justify-center'>
                 <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75 mt-36 '>
                     <pre data-prefix='$' className='text-gray-600 font-Source'>
@@ -65,7 +65,7 @@ const Hero = () => {
                 </div>
                 <div className='w-1/3'></div>
             </div>
-        </section>
+        </main>
     )
 }
 

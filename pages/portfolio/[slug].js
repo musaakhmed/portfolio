@@ -46,7 +46,7 @@ export default function ProjectPage({ project }) {
                 <title>{project.title}</title>
             </Head>
 
-            <main className=''>
+            <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
                 <h2>{project.title}</h2>
                 <Image
                     src={project.coverImage.url}

@@ -47,7 +47,7 @@ export default function BlogPost({ post }) {
                 <title>{post.title}</title>
             </Head>
 
-            <main className=''>
+            <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
                 <h2>{post.title}</h2>
                 <p>{new Date(post.date).toDateString()}</p>
                 <Image
