@@ -1,8 +1,8 @@
 const Hero = () => {
     return (
         <section className='h-screen w-screen'>
-            <div className='max-w-2xl lg:max-w-6xl mx-auto flex-col flex h-full items-center justify-around'>
-                <div className='hidden md:block mockup-code text-sm md:text-base bg-[#000] bg-opacity-75'>
+            <div className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-row flex h-full items-start justify-center'>
+                <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75 mt-36 '>
                     <pre data-prefix='$' className='text-gray-600 font-Source'>
                         <code>Hi, my name is</code>
                     </pre>
@@ -34,16 +34,15 @@ const Hero = () => {
                         </code>
                     </pre>
                 </div>
-                <div className='md:hidden'>
-                    <div className='mockup-code bg-[#000] bg-opacity-75'>
+                <div className='lg:hidden mt-12 mx-auto'>
+                    <div className='mockup-code bg-[#27274497] bg-opacity-75'>
+                        <pre></pre>
                         <pre data-prefix='$'>
                             <code>Hi, my name is</code>
                         </pre>
                         <pre data-prefix='>' className='text-warning'>
                             <code>Musa!</code>
                         </pre>
-                        <pre></pre>
-                        <pre></pre>
                         <pre></pre>
                         <pre data-prefix='info' className='text-gray-200 p-4'>
                             <code className=''>
@@ -64,7 +63,7 @@ const Hero = () => {
                         </pre>
                     </div>
                 </div>
-                <div className='h-1/3'>test</div>
+                <div className='w-1/3'></div>
             </div>
         </section>
     )
