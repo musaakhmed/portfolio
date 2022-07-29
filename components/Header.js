@@ -23,7 +23,7 @@ const Header = () => {
                         ))}
                     </ol>
                     <button className='ml-12 px-6 py-2 text-sun border border-sun rounded bg-gray-200 bg-opacity-0 hover:bg-opacity-30 dark:bg-sun-700 dark:bg-opacity-20 dark:hover:bg-opacity-50 transition-all duration-300  text-sm'>
-                        Say Hi!
+                        Hi(re me)!
                     </button>
                 </nav>
             </div>
