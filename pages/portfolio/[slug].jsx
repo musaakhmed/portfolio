@@ -57,12 +57,8 @@ export default function ProjectPage({ project }) {
                 <p>{project.description}</p>
                 <RichText content={project.content.raw.children} />
 
-                <a href={project.repository} target='_blank'>
-                    Repository
-                </a>
-                <a href={project.link} target='_blank'>
-                    Website
-                </a>
+                <a href={project.repository}>Repository</a>
+                <a href={project.link}>Website</a>
                 <div>
                     {project.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
