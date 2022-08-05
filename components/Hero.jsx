@@ -2,7 +2,7 @@ const Hero = () => {
     return (
         <main className='h-screen w-screen'>
             <div className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-row flex h-full items-start justify-center'>
-                <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75 mt-36 '>
+                <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75 mt-36'>
                     <pre data-prefix='$' className='text-gray-600 font-Source'>
                         <code>Hi, my name is</code>
                     </pre>
