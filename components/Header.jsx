@@ -34,7 +34,7 @@ const Header = () => {
                 </button>
             </nav>
             <div
-                className='flex justify-end lg:hidden transition-all duration-300 ease-in p-4'
+                className='flex justify-end lg:hidden transition-all duration-300 ease-in p-4 cursor-pointer'
                 onClick={mobileMenuHandler}
             >
                 {menuOpen ? (
