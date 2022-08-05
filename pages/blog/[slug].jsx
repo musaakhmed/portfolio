@@ -54,6 +54,7 @@ export default function BlogPost({ post }) {
                     src={post.coverImage.url}
                     width={post.coverImage.width}
                     height={post.coverImage.height}
+                    alt=''
                 />
                 <RichText content={post.content.raw.children} />
                 <div>

@@ -52,6 +52,7 @@ export default function ProjectPage({ project }) {
                     src={project.coverImage.url}
                     width={project.coverImage.width}
                     height={project.coverImage.height}
+                    alt=''
                 />
                 <p>{project.description}</p>
                 <RichText content={project.content.raw.children} />
