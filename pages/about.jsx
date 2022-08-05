@@ -17,9 +17,9 @@ function About() {
                     Hi, my name is Musa!
                 </h5>
                 <p className=''>
-                    I'm a self-taught front-end developer based in Barcelona. I
-                    have started learning HTML and later PHP and MySQL back in
-                    2005{' '}
+                    I&quot;m a self-taught front-end developer based in
+                    Barcelona. I have started learning HTML and later PHP and
+                    MySQL back in 2005{' '}
                     <em className='text-gray-500 text-sm'>
                         (I still remember you, PHPNuke and Invision Power
                         Board!)
