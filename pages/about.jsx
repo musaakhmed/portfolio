@@ -49,7 +49,7 @@ function About() {
                     Here are the technologies I have been working with for the
                     last years:
                 </p>
-                <p className='flex flex-col font-Source text-sm text-gray-500'>
+                <div className='flex flex-col font-Source text-sm text-gray-500'>
                     <ol className='list-disc marker:text-sun-600 ml-8'>
                         <li className='list-outside hover:list-inside transition duration-300 ease-in'>
                             JavaScript (ES6+)
@@ -70,7 +70,7 @@ function About() {
                             SASS
                         </li>
                     </ol>
-                </p>
+                </div>
             </section>
         </div>
     )
