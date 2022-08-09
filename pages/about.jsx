@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 function About() {
     return (
-        <div className='flex lg:flex-row flex-col py-16 items-center max-w-5xl space-y-4 justify-center mx-auto font-Roboto'>
+        <div className='flex lg:flex-row flex-col py-16 items-center max-w-5xl h-screen space-y-4 justify-center mx-auto font-Roboto'>
             <div className='w-1/3 flex items-center justify-center'>
                 <Image
-                    className='rounded hover:opacity-100 opacity-75 transition-all duration-200 ease-in'
+                    className='rounded-xl hover:opacity-100 opacity-75 transition-all duration-200 ease-in'
                     src='/assets/photos/portrait.jpeg'
                     width='240px'
                     height='240px'
