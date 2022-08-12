@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Hero from '../components/Hero'
 import SocialLinks from '../components/SocialLinks'
@@ -13,12 +14,12 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }) {
-    console.log(data)
+    console.log(data.posts[0].tags)
     return (
-        <div className=''>
+        <div className='bg-oxford'>
             <Hero />
-            <section className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <div>
+            <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
+                <section>
                     {data.portfolios.map((project) => (
                         <div key={project.slug}>
                             <Link
@@ -29,22 +30,53 @@ export default function Home({ data }) {
                             </Link>
                         </div>
                     ))}
-                </div>
-
-                <div>
+                </section>
+                <section className='my-2'>
                     {data.posts.map((post) => (
-                        <div key={post.slug}>
-                            <Link
-                                href={`blog/${post.slug}`}
-                                className='text-2xl font-bold'
-                            >
-                                <a>{post.title}</a>
-                            </Link>
-                            <div>{new Date(post.date).toDateString()}</div>
+                        <div
+                            key={post.slug}
+                            className='mx-auto my-2 bg-gray-300 bg-opacity-75 px-2 rounded-lg'
+                        >
+                            <div className='flex flex-col lg:flex-row justify-center items-center p-1'>
+                                <div className='p-2 max-h-48 max-w-64'>
+                                    <Link href={`blog/${post.slug}`}>
+                                        <a>
+                                            <Image
+                                                className='rounded-lg hover:opacity-100 opacity-75 transition-all duration-200 ease-in'
+                                                src={post.coverImage.url}
+                                                width={post.coverImage.width}
+                                                height={post.coverImage.height}
+                                                alt={post.title}
+                                            />
+                                        </a>
+                                    </Link>
+                                </div>
+                                <Link href={`blog/${post.slug}`}>
+                                    <a className='text-xl text-center font-semibold font-Source text-oxford hover:text-sun-400 transition-all duration-200 ease-in'>
+                                        {post.title}
+                                    </a>
+                                </Link>
+                                <p className='text-sm text-gray-800 font-Roboto'>
+                                    {new Date(post.date).toDateString()}
+                                </p>
+                                <div className='text-gray-800 font-semibold mx-auto p-2'>
+                                    {post.description}
+                                </div>
+                            </div>
+                            <div className='flex flex-wrap p-2 justify-center items-center'>
+                                {post.tags.map((tag) => (
+                                    <span
+                                        className='text-2xs max-w-24 m-1 p-1 uppercase bg-gray-300 rounded-lg text-gray-800'
+                                        key={tag}
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     ))}
-                </div>
-            </section>
+                </section>
+            </main>
         </div>
     )
 }

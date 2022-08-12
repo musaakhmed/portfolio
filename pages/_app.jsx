@@ -5,12 +5,12 @@ import SocialLinks from '../components/SocialLinks'
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
+        <div>
             <Header />
             <Component {...pageProps} />
             <Footer />
             <SocialLinks />
-        </>
+        </div>
     )
 }
 
