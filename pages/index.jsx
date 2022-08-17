@@ -19,7 +19,48 @@ export default function Home({ data }) {
         <div className='bg-oxford'>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <section>
+                <section className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'>
+                    <p className='text-xl font-Roboto text-sun-600 pb-12'>
+                        Some projects I've worked on:
+                    </p>
+                    {data?.portfolios?.map((item) => (
+                        <div key={item.slug}>
+                            <Link href={`/portfolio/${item.slug}`}>
+                                <a>
+                                    <div className='relative mb-10 overflow-hidden'>
+                                        <div className='absolute w-full h-full z-20 bg-sun-700 bg-opacity-80 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-center items-center text-center px-4'>
+                                            <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold text-2xl'>
+                                                {item.title}
+                                            </h3>
+                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-lg mt-4 leading-relaxed '>
+                                                {item.description}
+                                            </p>
+                                            <div className='mt-4 mx-4 flex flex-wrap justify-center items-center'>
+                                                {item.tags.map((tag) => (
+                                                    <span
+                                                        className='text-white bg-oxford uppercase text-xs lg:text-sm m-1 lg:m-2 bg-green-700 px-2 py-1 rounded-lg'
+                                                        key={tag}
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <Image
+                                            src={item.coverImage.url}
+                                            height={item.coverImage.height}
+                                            objectFit='cover'
+                                            width={item.coverImage.width}
+                                            className='absolute'
+                                        />
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
+                    ))}
+                </section>
+
+                {/* <section>
                     {data.portfolios.map((project) => (
                         <div key={project.slug}>
                             <Link
@@ -30,8 +71,9 @@ export default function Home({ data }) {
                             </Link>
                         </div>
                     ))}
-                </section>
-                <section className='my-2'>
+                </section> */}
+                <section className='h-screen my-4'>
+                    <span className='text-2xl'>Latest Blog Posts:</span>
                     {data.posts.map((post) => (
                         <div
                             key={post.slug}
