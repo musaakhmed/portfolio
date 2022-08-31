@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 
 export default function Home({ data }) {
     console.log(data.posts[0].tags)
+
     return (
         <div className='bg-oxford'>
             <Hero />
@@ -38,7 +39,7 @@ export default function Home({ data }) {
                                             <div className='mt-4 mx-4 flex flex-wrap justify-center items-center'>
                                                 {item.tags.map((tag) => (
                                                     <span
-                                                        className='text-white bg-oxford uppercase text-xs lg:text-sm m-1 lg:m-2 bg-green-700 px-2 py-1 rounded-lg'
+                                                        className='text-grey bg-oxford  uppercase text-xs lg:text-sm m-1 lg:m-2 px-2 py-1 rounded-lg'
                                                         key={tag}
                                                     >
                                                         {tag}
