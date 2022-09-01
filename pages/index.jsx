@@ -33,7 +33,7 @@ export default function Home({ data }) {
                                             <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold text-2xl'>
                                                 {item.title}
                                             </h3>
-                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-lg mt-4 leading-relaxed '>
+                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-lg mt-4 leading-relaxed'>
                                                 {item.description}
                                             </p>
                                             <div className='mt-4 mx-4 flex flex-wrap justify-center items-center'>
@@ -100,10 +100,10 @@ export default function Home({ data }) {
                                             {post.title}
                                         </a>
                                     </Link>
-                                    <p className='text-sm text-gray-800 font-Roboto '>
+                                    <p className='text-sm text-gray-800 font-Roboto'>
                                         {new Date(post.date).toDateString()}
                                     </p>
-                                    <div className='text-gray-800 font-Roboto mx-auto lg:mx-0 '>
+                                    <div className='text-gray-800 font-Roboto mx-auto lg:mx-0'>
                                         {post.description}
                                     </div>
                                     <div className='flex flex-wrap justify-center lg:justify-start items-center space-x-1'>
