@@ -22,7 +22,7 @@ export default function Home({ data }) {
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
                 <section className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'>
                     <p className='text-xl font-Roboto text-sun-600 pb-12'>
-                        Some projects I've worked on:
+                        Some projects I have worked on:
                     </p>
                     {data?.portfolios?.map((item) => (
                         <div key={item.slug}>
