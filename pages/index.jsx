@@ -28,18 +28,18 @@ export default function Home({ data }) {
                         <div key={item.slug}>
                             <Link href={`/portfolio/${item.slug}`}>
                                 <a>
-                                    <div className='relative mb-10 overflow-hidden'>
-                                        <div className='absolute w-full h-full z-20 bg-sun-700 bg-opacity-80 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-center items-center text-center px-4'>
-                                            <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold text-2xl'>
+                                    <div className='relative overflow-hidden'>
+                                        <div className='absolute w-full h-full z-20 bg-sun-700 lg:bg-opacity-80 bg-opacity-50 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-evenly lg:justify-center items-center text-center px-4'>
+                                            <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold lg:text-2xl'>
                                                 {item.title}
                                             </h3>
-                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-lg mt-4 leading-relaxed'>
+                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-sm lg:text-lg mt-1 lg:mt-4 lg;leading-relaxed'>
                                                 {item.description}
                                             </p>
-                                            <div className='mt-4 mx-4 flex flex-wrap justify-center items-center'>
+                                            <div className='hidden mx-auto mt-1 lg:mt-2 md:flex flex-wrap justify-center items-center'>
                                                 {item.tags.map((tag) => (
                                                     <span
-                                                        className='text-grey bg-oxford  uppercase text-xs lg:text-sm m-1 lg:m-2 px-2 py-1 rounded-lg'
+                                                        className='text-grey bg-oxford uppercase text-xs lg:text-sm m-[1px] lg:m-2 px-2 py-1 rounded-lg'
                                                         key={tag}
                                                     >
                                                         {tag}
@@ -54,6 +54,16 @@ export default function Home({ data }) {
                                             width={item.coverImage.width}
                                             className='absolute'
                                         />
+                                    </div>
+                                    <div className='mx-auto mb-6 flex flex-wrap justify-center items-center'>
+                                        {item.tags.map((tag) => (
+                                            <span
+                                                className='bg-sun-500 text-oxford uppercase text-2xs lg:text-sm m-[1px] lg:m-2 px-2 py-1 rounded-lg md:hidden'
+                                                key={tag}
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
                                     </div>
                                 </a>
                             </Link>
@@ -96,14 +106,14 @@ export default function Home({ data }) {
                                 </div>
                                 <div className='flex flex-col text-center lg:text-left lg:w-2/3 px-4 space-y-2 items-start'>
                                     <Link href={`blog/${post.slug}`}>
-                                        <a className='text-lg text-center lg:text-left font-semibold font-Source text-oxford hover:text-sun-400 transition-all duration-200 ease-in'>
+                                        <a className='text-lg text-center lg:text-left font-semibold leading-snug lg:leading-normal font-Source text-oxford hover:text-sun-400 transition-all duration-200 ease-in'>
                                             {post.title}
                                         </a>
                                     </Link>
                                     <p className='text-sm text-gray-800 font-Roboto'>
                                         {new Date(post.date).toDateString()}
                                     </p>
-                                    <div className='text-gray-800 font-Roboto mx-auto lg:mx-0'>
+                                    <div className='text-gray-800 font-Roboto mx-auto leading-tight md:leading-normal lg:mx-0'>
                                         {post.description}
                                     </div>
                                     <div className='flex flex-wrap justify-center lg:justify-start items-center space-x-1'>
