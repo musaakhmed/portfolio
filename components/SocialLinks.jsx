@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
     homeIcon,
     githubIcon,
@@ -11,9 +12,11 @@ const SocialLinks = () => {
         <main className='fixed lg:sticky w-full lg:w-12 bottom-0 lg:pl-24 lg:h-full bg-oxford lg:bg-transparent z-50'>
             <section className='flex lg:flex-col justify-evenly lg:justify-center items-center space-x-2 lg:space-y-6'>
                 <div>
-                    <a href='/'>
-                        <div>{homeIcon}</div>
-                    </a>
+                    <Link href='/'>
+                        <a>
+                            <div>{homeIcon}</div>
+                        </a>
+                    </Link>
                 </div>
                 <div className=''>
                     <a href='https://github.com/musapunhan'>
