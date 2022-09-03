@@ -6,7 +6,7 @@ const Header = () => {
     const nav = [
         { label: 'Home', path: '/' },
         { label: 'About', path: '/about' },
-        { label: 'Portfolio', path: '/portfolio' },
+        { label: 'Portfolio', path: '/#portfolio' },
         { label: 'Blog', path: '/blog' },
         { label: 'Resumé', path: '/resume' },
     ]
