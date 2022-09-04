@@ -73,7 +73,9 @@ export default function BlogPost({ post }) {
                         className='rounded-xl'
                     />
                 </div>
-                <RichText content={post.content.raw.children} />
+                <article className='prose'>
+                    <RichText content={post.content.raw.children} />
+                </article>
             </main>
         </div>
     )
