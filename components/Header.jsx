@@ -17,9 +17,9 @@ const Header = () => {
     }
 
     return (
-        <div className='font-Source'>
+        <div className='font-Source sticky top-0 z-50 bg-oxford bg-opacity-70 backdrop-filter backdrop-blur'>
             <nav className='hidden lg:flex flex-row justify-end items-center max-w-full px-12 py-4'>
-                <ol className='list-[decimal-leading-zero] text-sm list-inside flex justify-evenly space-x-6 marker:text-sun-500 marker:font-Source marker:text-sm marker:tracking-tighter'>
+                <ol className='list-[decimal-leading-zero] text-sm list-inside flex justify-evenly space-x-6 marker:text-sun-500 marker:font-Source marker:text-sm marker:tracking-tighter '>
                     {nav.map((nav) => (
                         <Link key={nav.path} href={nav.path}>
                             <a>
