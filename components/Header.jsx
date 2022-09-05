@@ -8,7 +8,6 @@ const Header = () => {
         { label: 'About', path: '/about' },
         { label: 'Portfolio', path: '/#portfolio' },
         { label: 'Blog', path: '/blog' },
-        { label: 'Resumé', path: '/resume' },
     ]
 
     const [menuOpen, setMenuOpen] = useState(false)

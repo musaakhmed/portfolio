@@ -1,5 +1,6 @@
 import { gql, GraphQLClient } from 'graphql-request'
 import { RichText } from '@graphcms/rich-text-react-renderer'
+import { externalLinkIcon, githubIcon } from '../../components/Svgs'
 import Head from 'next/head'
 import Image from 'next/image'
 import { portfolioProject } from '../../lib/data'
@@ -46,23 +47,32 @@ export default function ProjectPage({ project }) {
                 <title>{project.title}</title>
             </Head>
 
-            <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <h2>{project.title}</h2>
+            <main className='max-w-xl lg:max-w-5xl mx-auto min-h-screen px-12 space-y-3'>
+                <h2 className='text-xl lg:text-3xl text-sun font-Source my-4'>
+                    {project.title}
+                </h2>
                 <Image
                     src={project.coverImage.url}
                     width={project.coverImage.width}
                     height={project.coverImage.height}
-                    alt=''
+                    alt={project.description}
                 />
-                <p>{project.description}</p>
-                <RichText content={project.content.raw.children} />
-
-                <a href={project.repository}>Repository</a>
-                <a href={project.link}>Website</a>
-                <div>
+                <div className='prose text-gray-300'>
+                    <RichText content={project.content.raw.children} />
+                </div>
+                <div className='flex flex-wrap'>
                     {project.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
+                        <span
+                            className='px-3 py-1 space-x-2 bg-gray rounded-lg m-1 text-xs text-gray-900 uppercase'
+                            key={tag}
+                        >
+                            {tag}
+                        </span>
                     ))}
+                </div>
+                <div className='flex space-x-2'>
+                    <a href={project.repository}>{githubIcon}</a>
+                    <a href={project.link}>{externalLinkIcon}</a>
                 </div>
             </main>
         </div>
