@@ -14,11 +14,14 @@ export const getStaticProps = async () => {
 const Blog = ({ posts }) => {
     console.log(posts)
     return (
-        <div className='min-h-screen '>
+        <div className='min-h-screen pt-24'>
+            <h2 className='mx-auto w-[90%] lg:max-w-6xl text-3xl font-Source text-sun pb-4 '>
+                Latest posts
+            </h2>
             {posts.posts.map((post) => (
                 <div
                     key={post.slug}
-                    className='bg-sun text-oxford w-[90%] lg:max-w-6xl mx-auto p-3 m-3 rounded-xl
+                    className='bg-sun text-oxford w-[90%] lg:max-w-5xl mx-auto p-3 m-3 rounded-xl
                     flex flex-col md:items-center md:flex-row justify-center md:justify-start'
                 >
                     <div className='lg:w-1/3 md:w-1/2 md:px-2'>
