@@ -36,7 +36,7 @@ export default function Home({ data }) {
                                             <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold lg:text-2xl'>
                                                 {item.title}
                                             </h3>
-                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-sm lg:text-lg mt-1 lg:mt-4 lg;leading-relaxed'>
+                                            <p className='bg-oxford text-sun text-center px-2 mx-auto text-sm lg:text-lg mt-1 lg:mt-4 leading-tight lg:leading-relaxed'>
                                                 {item.description}
                                             </p>
                                             <div className='hidden mx-auto mt-1 lg:mt-2 md:flex flex-wrap justify-center items-center'>
@@ -61,7 +61,7 @@ export default function Home({ data }) {
                                     <div className='mx-auto mb-6 flex flex-wrap justify-center items-center'>
                                         {item.tags.map((tag) => (
                                             <span
-                                                className='bg-sun-500 text-oxford uppercase text-2xs lg:text-sm m-[1px] lg:m-2 px-2 py-1 rounded-lg md:hidden'
+                                                className='bg-sun-500 text-oxford uppercase text-2xs lg:text-sm m-[2px] lg:m-2 px-2 py-1 rounded-lg md:hidden'
                                                 key={tag}
                                             >
                                                 {tag}
@@ -122,7 +122,7 @@ export default function Home({ data }) {
                                     <div className='flex flex-wrap justify-center lg:justify-start items-center space-x-1'>
                                         {post.tags.map((tag) => (
                                             <span
-                                                className='text-2xs max-w-24 uppercase bg-gray-300 px-1 rounded-md text-gray-800'
+                                                className='text-2xs max-w-24 uppercase bg-gray-300 px-1 py-0.5 m-0.5 rounded-md text-gray-800'
                                                 key={tag}
                                             >
                                                 {tag}
