@@ -57,7 +57,7 @@ export default function BlogPost({ post }) {
                 <div className='my-4 flex flex-wrap justify-start items-center'>
                     {post.tags.map((tag) => (
                         <span
-                            className='text-oxford bg-sun bg-opacity-75 uppercase text-xs lg:text-sm m-1 p-1 rounded-lg'
+                            className='text-oxford bg-sun bg-opacity-75 uppercase text-xs lg:text-sm m-1 py-0.5 px-1 lg:py-1 lg:px-2 rounded-lg'
                             key={tag}
                         >
                             {tag}
