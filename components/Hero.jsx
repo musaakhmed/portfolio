@@ -34,7 +34,7 @@ const Hero = () => {
                         </code>
                     </pre>
                 </div>
-                <div className='lg:hidden mt-12 mx-auto'>
+                <div className='lg:hidden pt-24 mx-auto'>
                     <div className='mockup-code bg-[#27274497] bg-opacity-75'>
                         <pre></pre>
                         <pre data-prefix='$'>
