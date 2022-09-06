@@ -21,18 +21,18 @@ export default function Home({ data }) {
         <div className='bg-oxford'>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <section
-                    id='portfolio'
-                    className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'
-                >
-                    <p className='text-xl font-Roboto text-sun-600 pb-12'>
+                <section className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'>
+                    <p
+                        id='portfolio'
+                        className='text-xl font-Roboto text-sun-600 pb-12'
+                    >
                         Some projects I have worked on:
                     </p>
                     {data?.portfolios?.map((item) => (
                         <div key={item.slug}>
                             <Link href={`/portfolio/${item.slug}`}>
                                 <a>
-                                    <div className='relative overflow-hidden scroll-mt-10'>
+                                    <div className='relative overflow-hidden'>
                                         <div className='absolute w-full h-full z-20 bg-sun-700 lg:bg-opacity-80 bg-opacity-50 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-evenly lg:justify-center items-center text-center px-4'>
                                             <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold lg:text-2xl'>
                                                 {item.title}

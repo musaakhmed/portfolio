@@ -1,8 +1,10 @@
+import { scrollDownIcon } from './Svgs'
+
 const Hero = () => {
     return (
         <main className='h-screen w-screen'>
-            <div className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-row flex h-full items-start justify-center'>
-                <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75 mt-36'>
+            <section className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-col flex h-full items-start justify-evenly'>
+                <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75'>
                     <pre data-prefix='$' className='text-gray-600 font-Source'>
                         <code>Hi, my name is</code>
                     </pre>
@@ -64,7 +66,14 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='w-1/3'></div>
-            </div>
+                <div className='mx-auto'>
+                    <a href='/#portfolio'>
+                        <button className='p-[0.5px] border-sun border rounded-full animate-bounce bg-sun bg-opacity-40 text-sun'>
+                            {scrollDownIcon}
+                        </button>
+                    </a>
+                </div>
+            </section>
         </main>
     )
 }
