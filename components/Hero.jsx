@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { scrollDownIcon } from './Svgs'
 
 const Hero = () => {
@@ -67,11 +68,13 @@ const Hero = () => {
                 </div>
                 <div className='w-1/3'></div>
                 <div className='mx-auto'>
-                    <a href='/#portfolio'>
-                        <button className='p-[0.5px] border-sun border rounded-full animate-bounce bg-sun bg-opacity-40 text-sun'>
-                            {scrollDownIcon}
-                        </button>
-                    </a>
+                    <Link href='/#portfolio'>
+                        <a>
+                            <button className='p-[0.5px] border-sun border rounded-full animate-bounce bg-sun bg-opacity-40 text-sun'>
+                                {scrollDownIcon}
+                            </button>
+                        </a>
+                    </Link>
                 </div>
             </section>
         </main>
