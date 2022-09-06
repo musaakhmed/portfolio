@@ -42,7 +42,7 @@ export default function BlogPost({ post }) {
     console.log(post)
 
     return (
-        <div>
+        <div className='min-h-screen pt-24'>
             <Head>
                 <title>{post.title}</title>
             </Head>

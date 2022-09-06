@@ -42,12 +42,12 @@ export default function ProjectPage({ project }) {
     console.log(project)
 
     return (
-        <div>
+        <div className='min-h-screen pt-24'>
             <Head>
                 <title>{project.title}</title>
             </Head>
 
-            <main className='max-w-xl lg:max-w-5xl mx-auto min-h-screen px-12 space-y-3'>
+            <main className='max-w-xl lg:max-w-5xl mx-auto px-12 space-y-3'>
                 <h2 className='text-xl lg:text-3xl text-sun font-Source my-4'>
                     {project.title}
                 </h2>
