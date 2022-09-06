@@ -19,18 +19,22 @@ const Header = () => {
     return (
         <div className='font-Source sticky top-0 z-50 bg-oxford bg-opacity-70 backdrop-filter backdrop-blur'>
             <nav className='hidden lg:flex flex-row justify-end items-center max-w-full px-12 py-4'>
-                <ol className='list-[decimal-leading-zero] text-sm list-inside flex justify-evenly space-x-6 marker:text-sun-500 marker:font-Source marker:text-sm marker:tracking-tighter '>
+                <ol className='text-sm flex justify-evenly space-x-8 pr-8'>
                     {nav.map((nav) => (
                         <Link key={nav.path} href={nav.path}>
                             <a>
-                                <li>{nav.label}</li>
+                                <li className='hover:text-sun duration-300 ease-in-out font-bold'>
+                                    {nav.label}
+                                </li>
                             </a>
                         </Link>
                     ))}
                 </ol>
-                <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
-                    Say hi!
-                </button>
+                <a href='mailto:musa.akhmed@pm.me'>
+                    <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
+                        Say hi!
+                    </button>
+                </a>
             </nav>
             <div
                 className='flex justify-end lg:hidden transition-all duration-300 ease-in p-4 cursor-pointer z-50 fixed top-0 right-0'
@@ -59,12 +63,14 @@ const Header = () => {
                         </Link>
                     ))}
                 </ol>
-                <button
-                    onClick={mobileMenuHandler}
-                    className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
-                >
-                    Say hi!
-                </button>
+                <a href='mailto:musa.akhmed@pm.me'>
+                    <button
+                        onClick={mobileMenuHandler}
+                        className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
+                    >
+                        Say hi!
+                    </button>
+                </a>
             </nav>
         </div>
     )

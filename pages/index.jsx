@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from '../components/ContactForm'
 import Hero from '../components/Hero'
 import SocialLinks from '../components/SocialLinks'
 import { portfolioAndBlogData } from '../lib/data'
@@ -134,6 +135,8 @@ export default function Home({ data }) {
                         </div>
                     ))}
                 </section>
+
+                <ContactForm />
             </main>
         </div>
     )
