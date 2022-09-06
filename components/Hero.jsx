@@ -2,7 +2,7 @@ import { scrollDownIcon } from './Svgs'
 
 const Hero = () => {
     return (
-        <main className='h-screen w-screen'>
+        <main className='h-screen max-w-screen'>
             <section className='max-w-xl lg:max-w-5xl mx-auto px-12 flex-col flex h-full items-start justify-evenly'>
                 <div className='hidden lg:block mockup-code text-sm md:text-base bg-[#27274497] bg-opacity-75'>
                     <pre data-prefix='$' className='text-gray-600 font-Source'>
