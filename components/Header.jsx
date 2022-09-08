@@ -65,14 +65,16 @@ const Header = () => {
                         </Link>
                     ))}
                 </ol>
-                <a href='mailto:musa.akhmed@pm.me'>
-                    <button
-                        onClick={mobileMenuHandler}
-                        className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
-                    >
-                        Say hi!
-                    </button>
-                </a>
+                <Link href='/#sayhi'>
+                    <a>
+                        <button
+                            onClick={mobileMenuHandler}
+                            className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
+                        >
+                            Say hi!
+                        </button>
+                    </a>
+                </Link>
             </nav>
         </div>
     )
