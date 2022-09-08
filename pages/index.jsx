@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '../components/ContactForm'
@@ -19,6 +20,9 @@ export default function Home({ data }) {
 
     return (
         <div className='bg-oxford'>
+            <Head>
+                <title>Musa Akhmedov - Portfolio</title>
+            </Head>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
                 <section className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'>

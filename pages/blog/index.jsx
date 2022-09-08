@@ -1,6 +1,7 @@
 import { blogPosts } from '../../lib/data'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export const getStaticProps = async () => {
     const posts = await blogPosts()
@@ -15,6 +16,9 @@ const Blog = ({ posts }) => {
     console.log(posts)
     return (
         <div className='min-h-screen pt-24'>
+            <Head>
+                <title>Blog — Musa Akhmedov</title>
+            </Head>
             <h2 className='mx-auto w-[90%] lg:max-w-6xl text-3xl font-Source text-sun pb-4 '>
                 Latest posts
             </h2>
