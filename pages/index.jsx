@@ -24,7 +24,7 @@ export default function Home({ data }) {
                 <section className='mx-auto px-4 sm:px-6 lg:px-0 mb-24'>
                     <p
                         id='portfolio'
-                        className='text-xl font-Roboto text-sun-600 pb-12'
+                        className='text-xl font-Roboto text-sun-600 pb-12 pt-24'
                     >
                         Some projects I have worked on:
                     </p>

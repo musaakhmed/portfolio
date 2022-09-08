@@ -30,11 +30,13 @@ const Header = () => {
                         </Link>
                     ))}
                 </ol>
-                <a href='mailto:musa.akhmed@pm.me'>
-                    <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
-                        Say hi!
-                    </button>
-                </a>
+                <Link href='/#sayhi'>
+                    <a>
+                        <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
+                            Say hi!
+                        </button>
+                    </a>
+                </Link>
             </nav>
             <div
                 className='flex justify-end lg:hidden transition-all duration-300 ease-in p-4 cursor-pointer z-50 fixed top-0 right-0'
