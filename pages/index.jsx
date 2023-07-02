@@ -23,6 +23,9 @@ export default function Home({ data }) {
         <div className='bg-oxford'>
             <Head>
                 <title>Musa Akhmedov - Portfolio</title>
+                <a rel='me' href='https://mastodon.social/@punhan'>
+                    Mastodon
+                </a>
             </Head>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
@@ -62,6 +65,7 @@ export default function Home({ data }) {
                                             objectFit='cover'
                                             width={item.coverImage.width}
                                             className='absolute'
+                                            alt=''
                                         />
                                     </div>
                                     <div className='mx-auto mb-6 flex flex-wrap justify-center items-center'>
