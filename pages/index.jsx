@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import CardTest from '../components/Card'
 import ContactForm from '../components/ContactForm'
 import Hero from '../components/Hero'
 import SocialLinks from '../components/SocialLinks'
@@ -141,6 +142,8 @@ export default function Home({ data }) {
                 </section>
 
                 <ContactForm />
+
+                <CardTest />
             </main>
         </div>
     )

@@ -5,6 +5,7 @@ import {
     linkedinIcon,
     twitterIcon,
     instagramIcon,
+    mastodonIcon,
 } from './Svgs'
 
 const SocialLinks = () => {
@@ -37,6 +38,11 @@ const SocialLinks = () => {
                 <div>
                     <a href='https://instagram.com/neodarwishism/'>
                         <div>{instagramIcon}</div>
+                    </a>
+                </div>
+                <div>
+                    <a rel='me' href='https://mastodon.social/@punhan'>
+                        <div>{mastodonIcon}</div>
                     </a>
                 </div>
                 <div className='w-[1px] h-16 lg:h-48 bg-sun-500'></div>
