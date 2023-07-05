@@ -23,13 +23,13 @@ export default function Home({ data }) {
         <div className='bg-oxford'>
             <Head>
                 <title>Musa Akhmedov - Portfolio</title>
-                <a
+                {/* <a
                     rel='me'
                     href='https://mastodon.social/@punhan'
                     className='hidden'
                 >
-                    {/*  */}
-                </a>
+                    ''
+                </a> */}
             </Head>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
