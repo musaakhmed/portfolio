@@ -24,7 +24,7 @@ export default function Home({ data }) {
             <Head>
                 <title>Musa Akhmedov - Portfolio</title>
                 <a rel='me' href='https://mastodon.social/@punhan'>
-                    Mastodon
+                    {/*  */}
                 </a>
             </Head>
             <Hero />
@@ -147,7 +147,7 @@ export default function Home({ data }) {
 
                 <ContactForm />
 
-                <CardTest />
+                {/* <CardTest /> */}
             </main>
         </div>
     )
