@@ -20,7 +20,7 @@ const SocialLinks = () => {
                     </Link>
                 </div>
                 <div className=''>
-                    <a href='https://github.com/musapunhan'>
+                    <a href='https://github.com/musaakhmed'>
                         <div>{githubIcon}</div>
                         {/* <div className='w-[3px]  transition-all h-[1.5px] my-2 bg-sun-500'></div> */}
                     </a>
