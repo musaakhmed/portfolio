@@ -44,7 +44,7 @@ export default function BlogPost({ post }) {
     return (
         <div className='min-h-screen pt-24'>
             <Head>
-                <title>{post.title}</title>
+                <title>{post.title} | Blog</title>
             </Head>
 
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
@@ -54,7 +54,7 @@ export default function BlogPost({ post }) {
                 <p className='text-gray text-sm italic opacity-75'>
                     {new Date(post.date).toDateString()}
                 </p>
-                <div className='my-4 flex flex-wrap justify-start items-center'>
+                <div className='my-4 flex flex-wrap justify-start items-center '>
                     {post.tags.map((tag) => (
                         <span
                             className='text-oxford bg-sun bg-opacity-75 uppercase text-xs lg:text-sm m-1 py-0.5 px-1 lg:py-1 lg:px-2 rounded-lg'
@@ -73,8 +73,11 @@ export default function BlogPost({ post }) {
                         className='rounded-xl'
                     />
                 </div>
-                <article className='prose'>
-                    <RichText content={post.content.raw.children} />
+                <article className='prose text-gray'>
+                    <RichText
+                        className='text-gray'
+                        content={post.content.raw.children}
+                    />
                 </article>
             </main>
         </div>
