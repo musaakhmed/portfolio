@@ -5,7 +5,7 @@ import SocialLinks from '../components/SocialLinks'
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div>
+        <div className='bg-oxford text-gray'>
             <Header />
             <Component {...pageProps} />
             <Footer />

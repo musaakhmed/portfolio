@@ -40,11 +40,11 @@ const SocialLinks = () => {
                         <div>{instagramIcon}</div>
                     </a>
                 </div>
-                <div>
+                {/* <div>
                     <a rel='me' href='https://mastodon.social/@punhan'>
                         <div>{mastodonIcon}</div>
                     </a>
-                </div>
+                </div> */}
                 <div className='w-[1px] h-16 lg:h-48 bg-sun-500'></div>
             </section>
         </main>
