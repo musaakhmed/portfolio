@@ -9,6 +9,8 @@ const CardTest = () => {
             <div className='bg-blue my-5 mx-auto w-[520px] flex flex-col justify-start items-start'>
                 <Image
                     className='p-4'
+                    width={240}
+                    height={240}
                     alt='card image'
                     src='https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2050&q=80'
                 />
