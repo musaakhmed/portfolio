@@ -13,7 +13,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false)
 
     const mobileMenuHandler = () => {
-        setMenuOpen(!menuOpen)
+        setMenuOpen((prev) => !prev)
     }
 
     return (
@@ -52,8 +52,7 @@ const Header = () => {
                 className={
                     menuOpen
                         ? 'lg:hidden fixed top-0 right-0 w-full min-h-screen z-30 bg-sun flex flex-col justify-center items-center space-y-12 text-center text-oxford text-2xl font-bold font-Roboto duration-500'
-                        : // ? 'lg:hidden fixed left-0 transition-all z-30 h-screen w-screen flex justify-center items-center flex-col space-y-8 font-Source text-2xl text-center bg-oxford duration-300 ease-out'
-                          'fixed right-full top-0 w-full min-h-screen z-30 bg-sun flex flex-col justify-center items-center space-y-12 text-center text-oxford text-2xl font-bold font-Roboto duration-500'
+                        : 'fixed right-full top-0 w-full min-h-screen z-30 bg-sun flex flex-col justify-center items-center space-y-12 text-center text-oxford text-2xl font-bold font-Roboto duration-500'
                 }
             >
                 <ol className='flex flex-col space-y-2'>
