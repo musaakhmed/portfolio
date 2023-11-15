@@ -38,10 +38,11 @@ const Blog = ({ posts }) => {
                         />
                     </div>
                     <div className='md:px-2 md:w-1/2 lg:w-2/3'>
-                        <Link href={`blog/${post.slug}`}>
-                            <a className='text-xl font-semibold '>
-                                {post.title}
-                            </a>
+                        <Link
+                            href={`blog/${post.slug}`}
+                            className='text-xl font-semibold '
+                        >
+                            {post.title}
                         </Link>
                         <p className='text-gray-700 text-sm'>
                             {new Date(post.date).toDateString()}
