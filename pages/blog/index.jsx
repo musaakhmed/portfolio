@@ -49,11 +49,9 @@ const Blog = ({ posts }) => {
                         </p>
                         <div className='py-2'>{post.description}</div>
                         <Link href={`blog/${post.slug}`}>
-                            <a>
-                                <button className=' px-4 py-2 my-4 text-oxford border border-oxford rounded bg-sun bg-opacity-60 hover:bg-opacity-100 transition-all duration-300 text-sm'>
-                                    Read More{' '}
-                                </button>
-                            </a>
+                            <button className=' px-4 py-2 my-4 text-oxford border border-oxford rounded bg-sun bg-opacity-60 hover:bg-opacity-100 transition-all duration-300 text-sm'>
+                                Read More{' '}
+                            </button>
                         </Link>
                     </div>
                 </div>
