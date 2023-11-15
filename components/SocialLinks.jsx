@@ -14,9 +14,9 @@ const SocialLinks = () => {
             <section className='flex lg:flex-col justify-evenly lg:justify-center items-center space-x-2 lg:space-y-6'>
                 <div>
                     <Link href='/'>
-                        <a>
-                            <div>{homeIcon}</div>
-                        </a>
+
+                        <div>{homeIcon}</div>
+
                     </Link>
                 </div>
                 <div className=''>
@@ -48,7 +48,7 @@ const SocialLinks = () => {
                 <div className='w-[1px] h-16 lg:h-48 bg-sun-500'></div>
             </section>
         </main>
-    )
+    );
 }
 
 export default SocialLinks
