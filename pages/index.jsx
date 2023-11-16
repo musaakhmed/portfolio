@@ -1,10 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import CardTest from '../components/Card'
 import ContactForm from '../components/ContactForm'
 import Hero from '../components/Hero'
-import SocialLinks from '../components/SocialLinks'
 import { portfolioAndBlogData } from '../lib/data'
 
 export const getStaticProps = async () => {
@@ -17,19 +15,12 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }) {
-    console.log(data.posts[0].tags)
+    console.log(data.portfolios)
 
     return (
         <div className='bg-oxford'>
             <Head>
                 <title>Musa Akhmedov - Portfolio</title>
-                {/* <a
-                    rel='me'
-                    href='https://mastodon.social/@punhan'
-                    className='hidden'
-                >
-                    ''
-                 */}
             </Head>
             <Hero />
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
@@ -38,7 +29,7 @@ export default function Home({ data }) {
                         id='portfolio'
                         className='text-xl font-Roboto text-sun-600 pb-12 pt-24'
                     >
-                        Projects I have worked on recently:
+                        Some of the projects I have worked on:
                     </p>
                     {data.portfolios.map((project) => (
                         <Link
