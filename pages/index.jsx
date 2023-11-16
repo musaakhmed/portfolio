@@ -15,7 +15,8 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }) {
-    console.log(data.portfolios)
+    const projects = data.portfolios
+    const posts = data.posts
 
     return (
         <div className='bg-oxford'>
@@ -31,7 +32,7 @@ export default function Home({ data }) {
                     >
                         Some of the projects I have worked on:
                     </p>
-                    {data.portfolios.map((project) => (
+                    {projects.map((project) => (
                         <Link
                             key={project.slug}
                             href={`/portfolio/${project.slug}`}
@@ -81,7 +82,7 @@ export default function Home({ data }) {
 
                 <section className='h-screen my-4'>
                     <span className='text-2xl'>Latest Blog Posts:</span>
-                    {data.posts.map((post) => (
+                    {posts.map((post) => (
                         <div
                             key={post.slug}
                             className='mx-auto bg-gray-300 bg-opacity-75 my-4 p-4 rounded-lg'
