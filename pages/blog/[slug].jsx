@@ -51,7 +51,7 @@ export default function BlogPost({ post }) {
                 <h2 className='text-xl md:text-4xl font-Roboto text-sun'>
                     {post.title}
                 </h2>
-                <p className='text-gray text-sm italic opacity-75'>
+                <p className='text-gray-200 text-sm italic opacity-75'>
                     {new Date(post.date).toDateString()}
                 </p>
                 <div className='my-4 flex flex-wrap justify-start items-center '>
@@ -73,11 +73,8 @@ export default function BlogPost({ post }) {
                         className='rounded-xl'
                     />
                 </div>
-                <article className='prose text-gray'>
-                    <RichText
-                        className='text-gray'
-                        content={post.content.raw.children}
-                    />
+                <article className='prose prose-invert prose-h1:text-gray prose-blockquote:text-gray prose-code:text-gray-300 text-gray w-full max-w-4xl prose-code:bg-midnight'>
+                    <RichText content={post.content.raw.children} />
                 </article>
             </main>
         </div>
