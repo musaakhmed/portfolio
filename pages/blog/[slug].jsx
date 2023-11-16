@@ -73,7 +73,7 @@ export default function BlogPost({ post }) {
                         className='rounded-xl'
                     />
                 </div>
-                <article className='prose prose-invert prose-h1:text-gray prose-blockquote:text-gray prose-code:text-gray-300 text-gray w-full max-w-4xl prose-code:bg-midnight'>
+                <article className='prose prose-invert prose-h1:text-gray prose-blockquote:text-gray prose-code:text-gray-300 text-gray w-full max-w-4xl prose-code:bg-midnight prose-li:marker:text-gray-300'>
                     <RichText content={post.content.raw.children} />
                 </article>
             </main>
