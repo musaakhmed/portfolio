@@ -48,9 +48,9 @@ export default function BlogPost({ post }) {
             </Head>
 
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <h2 className='text-xl md:text-4xl font-Roboto text-sun'>
+                <h1 className='text-xl md:text-4xl font-Roboto text-sun'>
                     {post.title}
-                </h2>
+                </h1>
                 <p className='text-gray-200 text-sm italic opacity-75'>
                     {new Date(post.date).toDateString()}
                 </p>
