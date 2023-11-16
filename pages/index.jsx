@@ -38,7 +38,7 @@ export default function Home({ data }) {
                         id='portfolio'
                         className='text-xl font-Roboto text-sun-600 pb-12 pt-24'
                     >
-                        Some projects I have worked on:
+                        Projects I have worked on recently:
                     </p>
                     {data?.portfolios?.map((item) => (
                         <div key={item.slug}>
