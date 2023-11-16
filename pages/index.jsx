@@ -40,19 +40,22 @@ export default function Home({ data }) {
                     >
                         Projects I have worked on recently:
                     </p>
-                    {data.portfolios.map((item) => (
-                        <Link key={item.slug} href={`/portfolio/${item.slug}`}>
+                    {data.portfolios.map((project) => (
+                        <Link
+                            key={project.slug}
+                            href={`/portfolio/${project.slug}`}
+                        >
                             <section>
                                 <div className='relative overflow-hidden'>
                                     <div className='absolute w-full h-full z-20 bg-sun-700 lg:bg-opacity-80 bg-opacity-50 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-evenly lg:justify-center items-center text-center px-4'>
                                         <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold lg:text-2xl'>
-                                            {item.title}
+                                            {project.title}
                                         </h3>
                                         <p className='bg-oxford text-sun text-center px-2 mx-auto text-sm lg:text-lg mt-1 lg:mt-4 leading-tight lg:leading-relaxed'>
-                                            {item.description}
+                                            {project.description}
                                         </p>
                                         <div className='hidden mx-auto mt-1 lg:mt-2 md:flex flex-wrap justify-center items-center'>
-                                            {item.tags.map((tag) => (
+                                            {project.tags.map((tag) => (
                                                 <span
                                                     className='text-grey bg-oxford uppercase text-xs lg:text-sm m-[1px] lg:m-2 px-2 py-1 rounded-lg'
                                                     key={tag}
@@ -63,15 +66,15 @@ export default function Home({ data }) {
                                         </div>
                                     </div>
                                     <Image
-                                        src={item.coverImage.url}
-                                        height={item.coverImage.height}
-                                        width={item.coverImage.width}
+                                        src={project.coverImage.url}
+                                        height={project.coverImage.height}
+                                        width={project.coverImage.width}
                                         className='absolute object-cover'
                                         alt=''
                                     />
                                 </div>
                                 <div className='mx-auto mb-6 flex flex-wrap justify-center items-center'>
-                                    {item.tags.map((tag) => (
+                                    {project.tags.map((tag) => (
                                         <span
                                             className='bg-sun-500 text-oxford uppercase text-2xs lg:text-sm m-[2px] lg:m-2 px-2 py-1 rounded-lg md:hidden'
                                             key={tag}
@@ -85,18 +88,6 @@ export default function Home({ data }) {
                     ))}
                 </section>
 
-                {/* <section>
-                    {data.portfolios.map((project) => (
-                        <div key={project.slug}>
-                            <Link
-                                href={`/portfolio/${project.slug}`}
-                                className='text-2xl font-bold'
-                            >
-                                {project.title}
-                            </Link>
-                        </div>
-                    ))}
-                </section> */}
                 <section className='h-screen my-4'>
                     <span className='text-2xl'>Latest Blog Posts:</span>
                     {data.posts.map((post) => (
