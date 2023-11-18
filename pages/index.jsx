@@ -62,7 +62,7 @@ export default function Home({ data }) {
                                         height={project.coverImage.height}
                                         width={project.coverImage.width}
                                         className='absolute object-cover'
-                                        alt=''
+                                        alt={project.title}
                                     />
                                 </div>
                                 <div className='mx-auto mb-6 flex flex-wrap justify-center items-center'>
