@@ -2,7 +2,7 @@ import { gql, GraphQLClient } from 'graphql-request'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import Head from 'next/head'
 import Image from 'next/image'
-import { blogPost } from '../../lib/data'
+import { blogPost } from '../../../lib/data'
 
 const endpoint =
     'https://api-eu-central-1.graphcms.com/v2/cl5hfnf1c1cpf01uj2uuj1e9b/master'

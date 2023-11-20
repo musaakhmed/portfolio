@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import ContactForm from '../components/ContactForm'
-import Hero from '../components/Hero'
-import { portfolioAndBlogData } from '../lib/data'
+import ContactForm from '../../components/ContactForm'
+import Hero from '../../components/Hero'
+import { portfolioAndBlogData } from '../../lib/data'
 
 export const getStaticProps = async () => {
     const data = await portfolioAndBlogData()
