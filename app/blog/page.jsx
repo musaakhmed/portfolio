@@ -3,17 +3,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 
-export const getStaticProps = async () => {
+async function getBlogPosts() {
     const posts = await blogPosts()
-    return {
-        props: {
-            posts,
-        },
-    }
+
+    return posts
 }
 
-const Blog = ({ posts }) => {
-    console.log(posts)
+const Blog = async () => {
+    const posts = await getBlogPosts()
+
     return (
         <div className='min-h-screen pt-24'>
             <Head>
