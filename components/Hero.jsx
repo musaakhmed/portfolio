@@ -15,7 +15,7 @@ const Hero = () => {
                     <pre></pre>
                     <pre data-prefix='!' className='text-sun-600'>
                         <code>
-                            I am a front-end developer based in
+                            I am a front-end developer based in{' '}
                             <span className='text-sun-400'>
                                 Brussels, Belgium
                             </span>
