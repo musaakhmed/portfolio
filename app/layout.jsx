@@ -1,6 +1,6 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import SocialLinks from '../components/SocialLinks'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import SocialLinks from './components/SocialLinks'
 
 export const metadata = {
     title: 'Musa Akhmedov - Portfolio',
