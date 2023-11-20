@@ -9,7 +9,7 @@ const endpoint =
 
 const client = new GraphQLClient(endpoint)
 
-export const getStaticPaths = async () => {
+export const generateStaticParams = async () => {
     const query = gql`
         query {
             posts {
@@ -18,28 +18,21 @@ export const getStaticPaths = async () => {
         }
     `
     const data = await client.request(query)
-    console.log(data)
+    const posts = data.posts
 
-    return {
-        paths: data.posts.map((post) => ({
-            params: { slug: post.slug },
-        })),
-
-        fallback: false,
-    }
+    return posts
 }
 
-export const getStaticProps = async ({ params }) => {
-    const post = await blogPost(params.slug)
-    return {
-        props: {
-            post: post.posts[0],
-        },
-    }
+export const getBlogPosts = async ({ params }) => {
+    const post = await fetch(params)
+    console.log('Posts:', post)
+    return post
 }
 
-export default function BlogPost({ post }) {
-    console.log(post)
+export default async function BlogPost({ params }) {
+    const post = await getBlogPosts(params)
+
+    // console.log(post)
 
     return (
         <div className='min-h-screen pt-24'>
