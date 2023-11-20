@@ -18,7 +18,7 @@ function About() {
                 </h5>
                 <p className=''>
                     I&quot;m a self-taught front-end developer based in
-                    Barcelona. I have started learning HTML and later PHP and
+                    Brussels. I have started learning HTML and later PHP and
                     MySQL back in 2005{' '}
                     <em className='text-gray-500 text-sm'>
                         (I still remember you, PHPNuke and Invision Power
@@ -39,7 +39,7 @@ function About() {
                 </p>
                 <p>
                     I have lived in Azerbaijan, Belgium, Germany, the UK and
-                    currently enjoy my time in Barcelona, Spain.
+                    Spain.
                 </p>
                 <p>
                     My passions are all things tech, reading, photography (both

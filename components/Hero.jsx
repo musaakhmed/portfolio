@@ -16,7 +16,10 @@ const Hero = () => {
                     <pre data-prefix='!' className='text-sun-600'>
                         <code>
                             I am a front-end developer based in
-                            <span className='text-sun-400'> Barcelona</span>!
+                            <span className='text-sun-400'>
+                                Brussels, Belgium
+                            </span>
+                            !
                         </code>
                     </pre>
                     <pre></pre>
