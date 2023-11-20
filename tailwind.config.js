@@ -4,6 +4,7 @@ module.exports = {
     plugins: [require('daisyui'), require('@tailwindcss/typography')],
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
+        './app/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {

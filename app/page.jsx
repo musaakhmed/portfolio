@@ -1,25 +1,22 @@
-import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import ContactForm from '../components/ContactForm'
-import Hero from '../components/Hero'
-import { portfolioAndBlogData } from '../../lib/data'
+import ContactForm from './components/ContactForm'
+import Hero from './components/Hero'
+import { portfolioAndBlogData } from '../lib/data'
 
 export const metadata = {
-    title: 'My Page Title',
+    title: 'Musa Akhmedov - Portfolio',
 }
 
-export const getStaticProps = async () => {
+async function getData() {
     const data = await portfolioAndBlogData()
-    return {
-        props: {
-            data,
-        },
-        revalidate: 3600,
-    }
+
+    return data
 }
 
-export default function Home({ data }) {
+export default async function Home() {
+    const data = await getData()
+    console.log(data)
     const projects = data.portfolios
     const posts = data.posts
 
@@ -131,8 +128,6 @@ export default function Home({ data }) {
                 </section>
 
                 <ContactForm />
-
-                {/* <CardTest /> */}
             </main>
         </div>
     )
