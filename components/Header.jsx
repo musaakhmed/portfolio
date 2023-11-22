@@ -21,14 +21,14 @@ const Header = () => {
             <nav className='hidden lg:flex flex-row justify-end items-center max-w-full px-12 py-4'>
                 <ol className='text-sm flex justify-evenly space-x-8 pr-8'>
                     {nav.map((nav) => (
-                        <Link key={nav.path} href={nav.path}>
+                        <Link key={nav.path} href={nav.path} legacyBehavior>
                             <li className='hover:text-sun duration-300 ease-in-out font-bold'>
                                 {nav.label}
                             </li>
                         </Link>
                     ))}
                 </ol>
-                <Link href='/#sayhi'>
+                <Link href='/#sayhi' legacyBehavior>
                     <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
                         Say hi!
                     </button>
@@ -53,12 +53,12 @@ const Header = () => {
             >
                 <ol className='flex flex-col space-y-2'>
                     {nav.map((nav) => (
-                        <Link key={nav.path} href={nav.path}>
+                        <Link key={nav.path} href={nav.path} legacyBehavior>
                             <li onClick={mobileMenuHandler}>{nav.label}</li>
                         </Link>
                     ))}
                 </ol>
-                <Link href='/#sayhi'>
+                <Link href='/#sayhi' legacyBehavior>
                     <button
                         onClick={mobileMenuHandler}
                         className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
@@ -68,7 +68,7 @@ const Header = () => {
                 </Link>
             </nav>
         </div>
-    )
+    );
 }
 
 export default Header

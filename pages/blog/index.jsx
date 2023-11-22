@@ -38,27 +38,27 @@ const Blog = ({ posts }) => {
                         />
                     </div>
                     <div className='md:px-2 md:w-1/2 lg:w-2/3'>
-                        <Link href={`blog/${post.slug}`}>
-                            <a className='text-xl font-semibold '>
-                                {post.title}
-                            </a>
+                        <Link href={`blog/${post.slug}`} className='text-xl font-semibold '>
+
+                            {post.title}
+
                         </Link>
                         <p className='text-gray-700 text-sm'>
                             {new Date(post.date).toDateString()}
                         </p>
                         <div className='py-2'>{post.description}</div>
                         <Link href={`blog/${post.slug}`}>
-                            <a>
-                                <button className=' px-4 py-2 my-4 text-oxford border border-oxford rounded bg-sun bg-opacity-60 hover:bg-opacity-100 transition-all duration-300 text-sm'>
-                                    Read More{' '}
-                                </button>
-                            </a>
+
+                            <button className=' px-4 py-2 my-4 text-oxford border border-oxford rounded bg-sun bg-opacity-60 hover:bg-opacity-100 transition-all duration-300 text-sm'>
+                                Read More{' '}
+                            </button>
+
                         </Link>
                     </div>
                 </div>
             ))}
         </div>
-    )
+    );
 }
 
 export default Blog

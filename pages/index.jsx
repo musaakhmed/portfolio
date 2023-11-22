@@ -43,7 +43,7 @@ export default function Home({ data }) {
                     </p>
                     {data?.portfolios?.map((item) => (
                         <div key={item.slug}>
-                            <Link href={`/portfolio/${item.slug}`}>
+                            <Link href={`/portfolio/${item.slug}`} legacyBehavior>
                                 <div className='relative overflow-hidden'>
                                     <div className='absolute w-full h-full z-20 bg-sun-700 lg:bg-opacity-80 bg-opacity-50 hover:bg-opacity-30 transition-all duration-300 ease-in flex flex-col justify-evenly lg:justify-center items-center text-center px-4'>
                                         <h3 className='text-oxford bg-sun-400 rounded p-1 font-semibold lg:text-2xl'>
@@ -108,7 +108,7 @@ export default function Home({ data }) {
                         >
                             <div className='flex flex-col lg:flex-row justify-center items-center lg:items-start'>
                                 <div className='lg:w-1/3'>
-                                    <Link href={`blog/${post.slug}`}>
+                                    <Link href={`blog/${post.slug}`} legacyBehavior>
                                         <Image
                                             className='rounded-lg hover:opacity-100 opacity-75 transition-all duration-200 ease-in'
                                             src={post.coverImage.url}
@@ -119,10 +119,12 @@ export default function Home({ data }) {
                                     </Link>
                                 </div>
                                 <div className='flex flex-col text-center lg:text-left lg:w-2/3 px-4 space-y-2 items-start'>
-                                    <Link href={`blog/${post.slug}`}>
-                                        <a className='text-lg text-center lg:text-left font-semibold leading-snug lg:leading-normal font-Source text-oxford hover:text-sun-400 transition-all duration-200 ease-in'>
-                                            {post.title}
-                                        </a>
+                                    <Link
+                                        href={`blog/${post.slug}`}
+                                        className='text-lg text-center lg:text-left font-semibold leading-snug lg:leading-normal font-Source text-oxford hover:text-sun-400 transition-all duration-200 ease-in'>
+
+                                        {post.title}
+
                                     </Link>
                                     <p className='text-sm text-gray-800 font-Roboto'>
                                         {new Date(post.date).toDateString()}
@@ -151,5 +153,5 @@ export default function Home({ data }) {
                 {/* <CardTest /> */}
             </main>
         </div>
-    )
+    );
 }

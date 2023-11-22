@@ -71,7 +71,7 @@ const Hero = () => {
                 </div>
                 <div className='w-1/3'></div>
                 <div className='hidden md:block mx-auto'>
-                    <Link href='/#portfolio'>
+                    <Link href='/#portfolio' legacyBehavior>
                         <button className='p-[0.5px] border-sun border rounded-full animate-bounce bg-sun bg-opacity-40 text-sun'>
                             {scrollDownIcon}
                         </button>
@@ -79,7 +79,7 @@ const Hero = () => {
                 </div>
             </section>
         </main>
-    )
+    );
 }
 
 export default Hero
