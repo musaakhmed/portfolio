@@ -32,13 +32,11 @@ export const getBlogPosts = async ({ params }) => {
 export default async function BlogPost({ params }) {
     const post = await getBlogPosts(params)
 
-    // console.log(post)
-
     return (
         <div className='min-h-screen pt-24'>
-            <Head>
+            {/* <Head>
                 <title>{post.title} | Blog</title>
-            </Head>
+            </Head> */}
 
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
                 <h1 className='text-xl md:text-4xl font-Roboto text-sun'>
