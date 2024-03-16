@@ -7,8 +7,8 @@ function About() {
                 <Image
                     className='rounded-xl hover:opacity-100 opacity-75 transition-all duration-200 ease-in'
                     src='/assets/photos/portrait.jpeg'
-                    width='240px'
-                    height='240px'
+                    width={240}
+                    height={240}
                     alt=''
                 />
             </div>

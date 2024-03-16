@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
@@ -22,20 +24,16 @@ const Header = () => {
                 <ol className='text-sm flex justify-evenly space-x-8 pr-8'>
                     {nav.map((nav) => (
                         <Link key={nav.path} href={nav.path}>
-                            <a>
-                                <li className='hover:text-sun duration-300 ease-in-out font-bold'>
-                                    {nav.label}
-                                </li>
-                            </a>
+                            <li className='hover:text-sun duration-300 ease-in-out font-bold'>
+                                {nav.label}
+                            </li>
                         </Link>
                     ))}
                 </ol>
                 <Link href='/#sayhi'>
-                    <a>
-                        <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
-                            Say hi!
-                        </button>
-                    </a>
+                    <button className='ml-4 px-6 py-2 text-sun border border-sun rounded bg-sun-700 bg-opacity-20 hover:bg-opacity-50 transition-all duration-300 text-sm'>
+                        Say hi!
+                    </button>
                 </Link>
             </nav>
             <div
@@ -58,21 +56,17 @@ const Header = () => {
                 <ol className='flex flex-col space-y-2'>
                     {nav.map((nav) => (
                         <Link key={nav.path} href={nav.path}>
-                            <a>
-                                <li onClick={mobileMenuHandler}>{nav.label}</li>
-                            </a>
+                            <li onClick={mobileMenuHandler}>{nav.label}</li>
                         </Link>
                     ))}
                 </ol>
                 <Link href='/#sayhi'>
-                    <a>
-                        <button
-                            onClick={mobileMenuHandler}
-                            className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
-                        >
-                            Say hi!
-                        </button>
-                    </a>
+                    <button
+                        onClick={mobileMenuHandler}
+                        className=' px-6 py-2 text-oxford border border-1 active:border-double border-oxford rounded bg-sun-400 hover:bg-opacity-50 transition-all duration-300 text-sm'
+                    >
+                        Say hi!
+                    </button>
                 </Link>
             </nav>
         </div>

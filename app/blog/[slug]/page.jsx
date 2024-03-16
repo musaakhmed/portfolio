@@ -2,14 +2,18 @@ import { gql, GraphQLClient } from 'graphql-request'
 import { RichText } from '@graphcms/rich-text-react-renderer'
 import Head from 'next/head'
 import Image from 'next/image'
-import { blogPost } from '../../lib/data'
+import { blogPost } from '../../../lib/data'
+
+export const metadata = {
+    title: 'Blog | Musa Akhmedov',
+}
 
 const endpoint =
     'https://api-eu-central-1.graphcms.com/v2/cl5hfnf1c1cpf01uj2uuj1e9b/master'
 
 const client = new GraphQLClient(endpoint)
 
-export const getStaticPaths = async () => {
+export const generateStaticParams = async () => {
     const query = gql`
         query {
             posts {
@@ -18,40 +22,31 @@ export const getStaticPaths = async () => {
         }
     `
     const data = await client.request(query)
-    console.log(data)
+    const posts = data.posts
 
-    return {
-        paths: data.posts.map((post) => ({
-            params: { slug: post.slug },
-        })),
-
-        fallback: false,
-    }
+    return posts
 }
 
-export const getStaticProps = async ({ params }) => {
-    const post = await blogPost(params.slug)
-    return {
-        props: {
-            post: post.posts[0],
-        },
-    }
+export const getBlogPosts = async ({ params }) => {
+    const post = await fetch(params)
+    console.log('Posts:', post)
+    return post
 }
 
-export default function BlogPost({ post }) {
-    console.log(post)
+export default async function BlogPost({ params }) {
+    const post = await getBlogPosts(params)
 
     return (
         <div className='min-h-screen pt-24'>
-            <Head>
+            {/* <Head>
                 <title>{post.title} | Blog</title>
-            </Head>
+            </Head> */}
 
             <main className='max-w-xl lg:max-w-5xl mx-auto px-12'>
-                <h2 className='text-xl md:text-4xl font-Roboto text-sun'>
+                <h1 className='text-xl md:text-4xl font-Roboto text-sun'>
                     {post.title}
-                </h2>
-                <p className='text-gray text-sm italic opacity-75'>
+                </h1>
+                <p className='text-gray-200 text-sm italic opacity-75'>
                     {new Date(post.date).toDateString()}
                 </p>
                 <div className='my-4 flex flex-wrap justify-start items-center '>
@@ -73,11 +68,8 @@ export default function BlogPost({ post }) {
                         className='rounded-xl'
                     />
                 </div>
-                <article className='prose text-gray'>
-                    <RichText
-                        className='text-gray'
-                        content={post.content.raw.children}
-                    />
+                <article className='prose prose-invert prose-h1:text-gray prose-blockquote:text-gray prose-code:text-gray-300 text-gray w-full max-w-4xl prose-code:bg-midnight prose-li:marker:text-gray-300'>
+                    <RichText content={post.content.raw.children} />
                 </article>
             </main>
         </div>
