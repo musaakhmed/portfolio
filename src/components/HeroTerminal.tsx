@@ -28,20 +28,20 @@ Tech architecture, analogue & digital photography, long-distance walking`
   }
 
   return (
-    <section className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-center px-6 py-12 lg:px-12">
+    <section className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-12">
       <div className="mx-auto max-w-5xl w-full">
         {/* Intro Badge */}
-        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-4 py-1 text-xs font-mono font-medium text-sun">
-          <Sparkles className="h-3.5 w-3.5" />
-          <span>Available for front-end &amp; full-stack opportunities</span>
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-3.5 py-1 text-xs font-mono font-medium text-sun max-w-full">
+          <Sparkles className="h-3.5 w-3.5 shrink-0" />
+          <span className="truncate">Available for front-end &amp; full-stack opportunities</span>
         </div>
 
         {/* Semantic H1 */}
-        <h1 className="mb-6 font-mono text-4xl font-extrabold tracking-tight text-slate-100 sm:text-6xl lg:text-7xl">
+        <h1 className="mb-4 sm:mb-6 font-mono text-3xl font-extrabold tracking-tight text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl break-words">
           Hi, my name is <span className="text-sun">Musa</span>.
         </h1>
 
-        <p className="mb-8 max-w-2xl text-lg text-slate-300 sm:text-xl leading-relaxed">
+        <p className="mb-6 sm:mb-8 max-w-2xl text-base text-slate-300 sm:text-lg lg:text-xl leading-relaxed">
           I build high-performance web applications with{" "}
           <strong className="font-semibold text-slate-100">React</strong>,{" "}
           <strong className="font-semibold text-slate-100">Next.js</strong>, and{" "}
@@ -50,21 +50,22 @@ Tech architecture, analogue & digital photography, long-distance walking`
         </p>
 
         {/* Interactive Terminal Window */}
-        <div className="mb-10 overflow-hidden rounded-xl border border-oxford-border bg-oxford-card shadow-2xl">
+        <div className="mb-8 sm:mb-10 overflow-hidden rounded-xl border border-oxford-border bg-oxford-card shadow-2xl">
           {/* Terminal Window Header */}
-          <div className="flex items-center justify-between border-b border-oxford-border bg-oxford/90 px-4 py-3">
-            <div className="flex items-center space-x-2">
-              <span className="h-3 w-3 rounded-full bg-red-500/80" />
-              <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-              <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-              <span className="ml-2 font-mono text-xs text-slate-400">
+          <div className="flex items-center justify-between border-b border-oxford-border bg-oxford/90 px-3 py-2.5 sm:px-4 sm:py-3">
+            <div className="flex items-center space-x-2 min-w-0">
+              <span className="h-3 w-3 shrink-0 rounded-full bg-red-500/80" />
+              <span className="h-3 w-3 shrink-0 rounded-full bg-amber-500/80" />
+              <span className="h-3 w-3 shrink-0 rounded-full bg-emerald-500/80" />
+              <span className="ml-1.5 sm:ml-2 font-mono text-xs text-slate-400 truncate max-w-[150px] xs:max-w-[220px] sm:max-w-none">
                 musa@brussels: ~/portfolio
               </span>
             </div>
             <button
               onClick={handleCopy}
-              className="flex items-center gap-1.5 rounded px-2 py-1 text-xs font-mono text-slate-400 transition-colors hover:bg-white/5 hover:text-sun"
+              className="flex shrink-0 items-center gap-1.5 rounded px-2 py-1 text-xs font-mono text-slate-400 transition-colors hover:bg-white/5 hover:text-sun"
               title="Copy terminal contents"
+              aria-label="Copy terminal text"
             >
               {copied ? (
                 <>
@@ -81,42 +82,50 @@ Tech architecture, analogue & digital photography, long-distance walking`
           </div>
 
           {/* Terminal Window Body */}
-          <div className="p-6 font-mono text-sm leading-relaxed text-slate-300">
-            <p className="text-slate-400">
-              <span className="text-sun">$</span> whoami
-            </p>
-            <p className="pl-4 text-sun-light font-medium">
-              Musa Akhmedov — Front-end Developer based in Brussels, Belgium
-            </p>
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed text-slate-300 break-words space-y-3">
+            <div>
+              <p className="text-slate-400">
+                <span className="text-sun">$</span> whoami
+              </p>
+              <p className="pl-2 sm:pl-4 text-sun-light font-medium mt-0.5">
+                Musa Akhmedov — Front-end Developer based in Brussels, Belgium
+              </p>
+            </div>
 
-            <p className="mt-3 text-slate-400">
-              <span className="text-sun">$</span> languages --spoken
-            </p>
-            <p className="pl-4 text-slate-200">
-              English, Azerbaijani, Turkish, French, Ukrainian, Russian, Spanish (7 languages)
-            </p>
+            <div>
+              <p className="text-slate-400">
+                <span className="text-sun">$</span> languages --spoken
+              </p>
+              <p className="pl-2 sm:pl-4 text-slate-200 mt-0.5">
+                English, Azerbaijani, Turkish, French, Ukrainian, Russian, Spanish (7 languages)
+              </p>
+            </div>
 
-            <p className="mt-3 text-slate-400">
-              <span className="text-sun">$</span> stack --primary
-            </p>
-            <p className="pl-4 text-slate-200">
-              React, Next.js (App Router), TypeScript, Tailwind CSS, Payload CMS
-            </p>
+            <div>
+              <p className="text-slate-400">
+                <span className="text-sun">$</span> stack --primary
+              </p>
+              <p className="pl-2 sm:pl-4 text-slate-200 mt-0.5">
+                React, Next.js (App Router), TypeScript, Tailwind CSS, Payload CMS
+              </p>
+            </div>
 
-            <p className="mt-3 text-slate-400">
-              <span className="text-sun">$</span> interests
-            </p>
-            <p className="pl-4 text-slate-200">
-              Tech architecture, analogue &amp; digital photography, long-distance walking
-            </p>
+            <div>
+              <p className="text-slate-400">
+                <span className="text-sun">$</span> interests
+              </p>
+              <p className="pl-2 sm:pl-4 text-slate-200 mt-0.5">
+                Tech architecture, analogue &amp; digital photography, long-distance walking
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
           <Link
             href="/#portfolio"
-            className="inline-flex items-center gap-2 rounded-lg bg-sun px-6 py-3 text-sm font-bold text-oxford transition-all hover:bg-sun-light hover:shadow-lg hover:shadow-sun/20"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-sun px-6 py-3.5 sm:py-3 text-sm font-bold text-oxford transition-all hover:bg-sun-light hover:shadow-lg hover:shadow-sun/20 text-center"
           >
             <span>View Recent Work</span>
             <ArrowRight className="h-4 w-4" />
@@ -124,14 +133,14 @@ Tech architecture, analogue & digital photography, long-distance walking`
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-6 py-3 text-sm font-semibold text-slate-200 transition-all hover:border-sun/60 hover:text-sun"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-6 py-3.5 sm:py-3 text-sm font-semibold text-slate-200 transition-all hover:border-sun/60 hover:text-sun text-center"
           >
             About My Journey
           </Link>
 
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium text-slate-400 transition-all hover:text-slate-100"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-transparent px-6 py-3.5 sm:py-3 text-sm font-medium text-slate-400 transition-all hover:text-slate-100 text-center"
           >
             Read Blog
           </Link>

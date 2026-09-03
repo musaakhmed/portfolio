@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 440px;
   --color-oxford: #000929;
   --color-oxford-card: #0a1338;
   --color-oxford-border: #1a2559;

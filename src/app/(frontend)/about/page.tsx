@@ -42,25 +42,25 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="py-20 px-6 lg:px-12 max-w-5xl mx-auto">
+    <div className="py-12 sm:py-20 px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto">
       {/* Page Header */}
-      <div className="mb-12 border-b border-oxford-border/60 pb-8">
+      <div className="mb-8 sm:mb-12 border-b border-oxford-border/60 pb-6 sm:pb-8">
         <div className="inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-3 py-1 text-xs font-mono font-medium text-sun mb-3">
           <Code className="h-3.5 w-3.5" />
           <span>Biography &amp; Background</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-mono font-bold text-slate-100">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-mono font-bold text-slate-100 break-words">
           Hi, my name is <span className="text-sun">Musa</span>!
         </h1>
-        <p className="mt-3 text-lg text-slate-400 font-mono">
+        <p className="mt-2 sm:mt-3 text-base sm:text-lg text-slate-400 font-mono">
           Front-End &amp; Full-Stack Developer based in Brussels, Belgium
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         {/* Bio Content Column */}
-        <div className="lg:col-span-8 space-y-6 text-slate-300 leading-relaxed">
-          <p className="text-lg text-slate-200">
+        <div className="lg:col-span-8 space-y-6 text-slate-300 leading-relaxed text-base sm:text-lg">
+          <p className="text-base sm:text-lg text-slate-200">
             I&apos;m a front-end and full-stack developer based in Brussels. My fascination with coding started back in 2005 when I built my first HTML, PHP, and MySQL community portals{" "}
             <span className="text-slate-400 italic text-sm">
               (PHPNuke and Invision Power Board days!)
@@ -76,47 +76,47 @@ export default function AboutPage() {
           </p>
 
           {/* Multilingual Fluency Showcase */}
-          <div className="rounded-xl border border-oxford-border bg-oxford-card p-6 my-8">
-            <h2 className="text-lg font-mono font-bold text-sun mb-3 flex items-center gap-2">
-              <Languages className="h-5 w-5" />
+          <div className="rounded-xl border border-oxford-border bg-oxford-card p-4 sm:p-6 my-6 sm:my-8">
+            <h2 className="text-base sm:text-lg font-mono font-bold text-sun mb-3 flex items-center gap-2">
+              <Languages className="h-5 w-5 shrink-0" />
               <span>Multilingual Communication (7 Languages)</span>
             </h2>
-            <p className="text-sm text-slate-300 mb-5">
+            <p className="text-xs sm:text-sm text-slate-300 mb-4 sm:mb-5">
               Fluency across multiple linguistic spaces enables seamless collaboration with international distributed teams, multicultural stakeholders, and global clients:
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               {spokenLanguages.map((lang) => (
                 <div
                   key={lang.name}
-                  className="flex items-center justify-between rounded-lg bg-oxford px-4 py-2.5 border border-oxford-border text-xs font-mono hover:border-sun/60 transition-colors"
+                  className="flex flex-col xs:flex-row xs:items-center justify-between rounded-lg bg-oxford p-3 sm:px-4 sm:py-2.5 border border-oxford-border text-xs font-mono gap-1 hover:border-sun/60 transition-colors"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-base">{lang.flag}</span>
+                    <span className="text-base shrink-0">{lang.flag}</span>
                     <span className="font-semibold text-slate-200">{lang.name}</span>
                   </div>
-                  <span className="text-slate-400 text-[11px]">{lang.level}</span>
+                  <span className="text-slate-400 text-[11px] xs:text-right shrink-0">{lang.level}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* International Journey */}
-          <div className="rounded-xl border border-oxford-border bg-oxford-card p-6 my-8">
-            <h2 className="text-lg font-mono font-bold text-sun mb-4 flex items-center gap-2">
-              <Globe className="h-5 w-5" />
+          <div className="rounded-xl border border-oxford-border bg-oxford-card p-4 sm:p-6 my-6 sm:my-8">
+            <h2 className="text-base sm:text-lg font-mono font-bold text-sun mb-3 sm:mb-4 flex items-center gap-2">
+              <Globe className="h-5 w-5 shrink-0" />
               <span>International Journey</span>
             </h2>
-            <p className="text-sm text-slate-300 mb-4">
+            <p className="text-xs sm:text-sm text-slate-300 mb-4">
               I have lived and worked across Europe and Eurasia, which shaped an adaptable, globally minded mindset:
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3">
               {places.map((place) => (
                 <div
                   key={place.country}
-                  className="rounded-lg bg-oxford px-3 py-2 border border-oxford-border text-xs font-mono"
+                  className="rounded-lg bg-oxford p-3 border border-oxford-border text-xs font-mono"
                 >
                   <span className="font-semibold text-slate-200 block">{place.country}</span>
-                  <span className="text-slate-400">{place.city}</span>
+                  <span className="text-slate-400 block mt-0.5">{place.city}</span>
                 </div>
               ))}
             </div>
@@ -127,15 +127,15 @@ export default function AboutPage() {
           </p>
 
           {/* Core Technologies Grid */}
-          <div className="pt-6">
-            <h2 className="text-xl font-mono font-bold text-slate-100 mb-4">
+          <div className="pt-4 sm:pt-6">
+            <h2 className="text-lg sm:text-xl font-mono font-bold text-slate-100 mb-4">
               Technologies &amp; Toolkit
             </h2>
-            <div className="flex flex-wrap gap-2.5">
+            <div className="flex flex-wrap gap-2 sm:gap-2.5">
               {skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className="inline-flex items-center gap-1.5 rounded-lg border border-oxford-border bg-oxford-card px-3.5 py-1.5 text-xs font-mono text-slate-200 transition-all hover:border-sun hover:text-sun"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-oxford-border bg-oxford-card px-3 py-1.5 text-xs font-mono text-slate-200 transition-all hover:border-sun hover:text-sun"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-sun" />
                   {skill.name}
@@ -145,17 +145,17 @@ export default function AboutPage() {
           </div>
 
           {/* Navigation CTA */}
-          <div className="pt-8 flex gap-4">
+          <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
               href="/#portfolio"
-              className="inline-flex items-center gap-2 rounded-lg bg-sun px-6 py-2.5 text-sm font-bold text-oxford hover:bg-sun-light transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-sun px-6 py-3.5 sm:py-2.5 text-sm font-bold text-oxford hover:bg-sun-light transition-all text-center"
             >
               <span>View Projects</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/#sayhi"
-              className="inline-flex items-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-6 py-2.5 text-sm font-semibold text-slate-200 hover:text-sun hover:border-sun/60 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-6 py-3.5 sm:py-2.5 text-sm font-semibold text-slate-200 hover:text-sun hover:border-sun/60 transition-all text-center"
             >
               Get in Touch
             </Link>
@@ -163,9 +163,9 @@ export default function AboutPage() {
         </div>
 
         {/* Sidebar / Profile Card Column */}
-        <div className="lg:col-span-4">
-          <div className="sticky top-24 rounded-xl border border-oxford-border bg-oxford-card p-6 shadow-xl space-y-6">
-            <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-oxford-border bg-oxford">
+        <div className="lg:col-span-4 w-full">
+          <div className="lg:sticky lg:top-24 rounded-xl border border-oxford-border bg-oxford-card p-4 sm:p-6 shadow-xl space-y-6">
+            <div className="relative aspect-square w-full max-w-xs sm:max-w-sm mx-auto lg:max-w-none overflow-hidden rounded-lg border border-oxford-border bg-oxford">
               <Image
                 src="https://media.graphassets.com/sKHqVQZHRSm1dNl70fQT"
                 alt="Portrait photo of Musa Akhmedov"

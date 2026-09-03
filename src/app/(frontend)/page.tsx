@@ -17,14 +17,14 @@ export default async function HomePage() {
       <HeroTerminal />
 
       {/* Featured Projects Section */}
-      <section id="portfolio" className="py-24 px-6 lg:px-12 max-w-6xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4 border-b border-oxford-border/60 pb-6">
+      <section id="portfolio" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4 border-b border-oxford-border/60 pb-6">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-3 py-1 text-xs font-mono font-medium text-sun mb-2">
               <Layers className="h-3 w-3" />
               <span>Selected Works</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-mono font-bold text-slate-100">
+            <h2 className="text-2xl sm:text-4xl font-mono font-bold text-slate-100">
               Featured <span className="text-sun">Projects</span>
             </h2>
           </div>
@@ -33,7 +33,7 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project) => (
             <Card
               key={project.slug}
@@ -53,7 +53,7 @@ export default async function HomePage() {
                 </div>
 
                 {/* Project Details */}
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tags.slice(0, 4).map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-[11px] font-mono">
@@ -63,7 +63,7 @@ export default async function HomePage() {
                   </div>
 
                   <Link href={`/portfolio/${project.slug}`}>
-                    <h3 className="text-xl font-bold font-mono text-slate-100 group-hover:text-sun transition-colors flex items-center gap-1.5">
+                    <h3 className="text-lg sm:text-xl font-bold font-mono text-slate-100 group-hover:text-sun transition-colors flex items-center gap-1.5">
                       <span>{project.title}</span>
                       <ArrowUpRight className="h-4 w-4 opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </h3>
@@ -76,7 +76,7 @@ export default async function HomePage() {
               </div>
 
               {/* Project Links Footer */}
-              <div className="border-t border-oxford-border/60 px-6 py-4 flex items-center justify-between text-xs font-mono">
+              <div className="border-t border-oxford-border/60 px-4 sm:px-6 py-3.5 sm:py-4 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
                 <Link
                   href={`/portfolio/${project.slug}`}
                   className="text-sun hover:underline font-semibold"
@@ -91,7 +91,7 @@ export default async function HomePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`View ${project.title} source code on GitHub`}
-                      className="text-slate-400 hover:text-sun transition-colors"
+                      className="p-1 text-slate-400 hover:text-sun transition-colors"
                     >
                       <GithubIcon className="h-4 w-4" />
                     </a>
@@ -102,7 +102,7 @@ export default async function HomePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Open live demo for ${project.title}`}
-                      className="text-slate-400 hover:text-sun transition-colors"
+                      className="p-1 text-slate-400 hover:text-sun transition-colors"
                     >
                       <ExternalLink className="h-4 w-4" />
                     </a>
@@ -115,14 +115,14 @@ export default async function HomePage() {
       </section>
 
       {/* Latest Blog Posts Section */}
-      <section className="py-20 px-6 lg:px-12 max-w-6xl mx-auto border-t border-oxford-border/60">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto border-t border-oxford-border/60">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-3 py-1 text-xs font-mono font-medium text-sun mb-2">
               <BookOpen className="h-3 w-3" />
               <span>Writing &amp; Notes</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-mono font-bold text-slate-100">
+            <h2 className="text-2xl sm:text-4xl font-mono font-bold text-slate-100">
               Latest <span className="text-sun">Articles</span>
             </h2>
           </div>
@@ -138,7 +138,7 @@ export default async function HomePage() {
           {posts.slice(0, 4).map((post) => (
             <Card
               key={post.slug}
-              className="group flex flex-col justify-between overflow-hidden bg-oxford-card border-oxford-border hover:border-sun/60 transition-all duration-300 p-6"
+              className="group flex flex-col justify-between overflow-hidden bg-oxford-card border-oxford-border hover:border-sun/60 transition-all duration-300 p-4 sm:p-6"
             >
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-3">
@@ -157,7 +157,7 @@ export default async function HomePage() {
                 </p>
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-2 pt-4 border-t border-oxford-border/40">
+              <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-between gap-2 pt-4 border-t border-oxford-border/40">
                 <div className="flex flex-wrap gap-1.5">
                   {post.tags.slice(0, 3).map((tag) => (
                     <span

@@ -74,14 +74,14 @@ export function ContactSection() {
   }
 
   return (
-    <section id="sayhi" className="py-24 px-6 lg:px-12 border-t border-oxford-border/40">
+    <section id="sayhi" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 border-t border-oxford-border/40">
       <div className="mx-auto max-w-4xl text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-sun/30 bg-sun/10 px-4 py-1 text-xs font-mono font-medium text-sun mb-4">
           <Mail className="h-3.5 w-3.5" />
           <span>Get in Touch</span>
         </div>
 
-        <h2 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-5xl font-mono">
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-100 font-mono">
           Say <span className="text-sun">hi!</span>
         </h2>
 
@@ -97,10 +97,10 @@ export function ContactSection() {
         </p>
 
         {/* 1-Click Copy Email Banner */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
           <a
             href={`mailto:${contactEmail}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-sun px-6 py-3 font-semibold text-oxford transition-all hover:bg-sun-light shadow-md shadow-sun/20"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-sun px-6 py-3.5 sm:py-3 font-semibold text-oxford transition-all hover:bg-sun-light shadow-md shadow-sun/20 text-center"
           >
             <Mail className="h-4 w-4" />
             <span>Open Email Client</span>
@@ -109,7 +109,7 @@ export function ContactSection() {
           <button
             type="button"
             onClick={handleCopyEmail}
-            className="inline-flex items-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-5 py-3 text-sm font-mono text-slate-200 transition-all hover:border-sun/60 hover:text-sun"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-oxford-border bg-oxford-card px-5 py-3.5 sm:py-3 text-sm font-mono text-slate-200 transition-all hover:border-sun/60 hover:text-sun text-center"
           >
             {copied ? (
               <>
@@ -126,7 +126,7 @@ export function ContactSection() {
         </div>
 
         {/* Interactive Direct Message Form with Resend */}
-        <div className="mt-12 max-w-xl mx-auto rounded-xl border border-oxford-border bg-oxford-card p-6 sm:p-8 text-left shadow-xl">
+        <div className="mt-10 sm:mt-12 max-w-xl mx-auto rounded-xl border border-oxford-border bg-oxford-card p-4 sm:p-8 text-left shadow-xl">
           {submitted ? (
             <div className="text-center py-8">
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
